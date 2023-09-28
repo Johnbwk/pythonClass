@@ -53,7 +53,7 @@ def update_banco_dados(input_cpf):
     """
     
     set = {cliente['nome'], cliente['cpf'], cliente['rg'], cliente['data_nascimento'], cliente['cep'], cliente['numero_residencia']}
-    cursor.execute(insert_query, set)
+    cursor.execute(update_query, set)
     connection.commit()
 
 cliente = {"nome": "Julio", "cpf": 789456123, "rg": 82415700, "data_nascimento": "28/03/1986", "cep": 81010270, "numero_residencia": 1150 }
