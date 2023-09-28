@@ -88,5 +88,5 @@ def buscar_cep(cep_input):
         }
         return endereco
     
-buscar_cep(81010270)
+# buscar_cep(81010270)
 

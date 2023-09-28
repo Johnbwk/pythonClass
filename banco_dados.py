@@ -17,7 +17,7 @@ def retorna_string_conexao_db():
         "DATABASE=SkillUp_JBOLWER;"
         # "UID=jbolwer;"
         # "PWD=;"
-        "Trusted_connection=yes;"
+        "Trusted_Connection=yes;"
     )
 
 def select_banco_dados():
@@ -38,13 +38,13 @@ def insert_banco_dados(cliente):
     cursor.execute(insert_query, values)
     connection.commit()
 
-def delete_banco_dados(cpf):
+def delete_banco_dados(input_cpf):
     cursor, connection = retornar_cursor_bd()
     delete_query = "DELETE FROM cliente WHERE cpf = '" + cpf + "';"
     cursor.execute(delete_query)
     connection.commit()
 
-def update_banco_dados(input_cpf):
+def update_banco_dados(cliente_cpf):
     cursor, connection = retornar_cursor_bd()
     update_query = """
     UPDATE cliente 
@@ -56,9 +56,9 @@ def update_banco_dados(input_cpf):
     cursor.execute(update_query, set)
     connection.commit()
 
-cliente = {"nome": "Julio", "cpf": 789456123, "rg": 82415700, "data_nascimento": "28/03/1986", "cep": 81010270, "numero_residencia": 1150 }
+# cliente = {"nome": "Julio", "cpf": 789456123, "rg": 82415700, "data_nascimento": "28/03/1986", "cep": 81010270, "numero_residencia": 1150 }
 
-insert_banco_dados(cliente)
+# insert_banco_dados(cliente)
 # insert_banco_dados()
 # select_banco_dados()
 # delete_banco_dados(cliente["CPF"])

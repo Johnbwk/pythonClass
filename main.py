@@ -24,7 +24,6 @@ def exibir_menu():
         elif opcao == 5:
             validador_menu = False
             print("Saindo do programa")
-            validador_menu = False
         else:
             print("Favor selecionar uma opçáo válida")
 

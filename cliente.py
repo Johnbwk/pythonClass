@@ -26,7 +26,9 @@ def menu_cliente():
             }
             lista_cliente.append(cliente_dicionario)
         elif opcao == 2:
-            pass
+            print("Atualizar cadastro do cliente ")
+            cliente = int(input("Digite o CPF do cliente para atualizar: "))
+            update_banco_dados(input_cpf)
         elif opcao == 3:
             pass
         elif opcao == 4:
